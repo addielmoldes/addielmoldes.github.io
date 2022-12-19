@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("../img/background2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: brightness(7%);
+    -webkit-backdrop-filter: brightness(7%);
+}
+
+nav {
+    width: 100%;
+    /* position: fixed; */
+    color: floralwhite;
+    font-size: larger;
+    padding-block: 15px;
+    /* background-color: darkgray; */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    /* margin-top: 10px; */
+}
+
+.navbrand,
+.navitem {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes navcolor {
+    0% {
+        color: floralwhite;
+    }
+
+    100% {
+        color: crimson;
+    }
+}
+
+.navitem:hover {
+    animation: navcolor 0.5s ease forwards;
+    -moz-animation: navcolor 0.5s ease forwards;
+}
+
+.navitem-active {
+    color: crimson;
+    text-decoration: none;
+}
+
+.navlink {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navlink li {
+    margin-inline: 25px;
+}
+
+main {
+    margin: auto;
+}
+
+.home {
+    color: floralwhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    /* display: none; */
+}
+
+.home-header,
+.contact-header {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.highlight {
+    color: crimson;
+}
+
+.about {
+    display: none;
+}
+
+.contact {
+    color: floralwhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+@keyframes bounce {
+
+    from,
+    to {
+        rotate: 0;
+    }
+
+    50% {
+        rotate: 360deg;
+    }
+}
+
+.email:hover,
+.linkedin:hover,
+.telegram:hover {
+    animation: bounce 3s ease;
+    -moz-animation: bounce 3s ease;
+}
+
+footer{
+    width: 100%;
+    font-size: large;
+    color: floralwhite;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-block: 5px;
+}
