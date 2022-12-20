@@ -13,11 +13,9 @@ body {
 
 nav {
     width: 100%;
-    /* position: fixed; */
     color: floralwhite;
     font-size: larger;
     padding-block: 15px;
-    /* background-color: darkgray; */
 }
 
 .content {
@@ -25,7 +23,6 @@ nav {
     justify-content: center;
     align-items: center;
     color: inherit;
-    /* margin-top: 10px; */
 }
 
 .navbrand,
@@ -45,8 +42,8 @@ nav {
 }
 
 .navitem:hover {
-    animation: navcolor 0.5s ease forwards;
-    -moz-animation: navcolor 0.5s ease forwards;
+    animation: navcolor .5s ease forwards;
+    -moz-animation: navcolor .5s ease forwards;
 }
 
 .navitem-active {
@@ -76,6 +73,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     /* display: none; */
 }
@@ -89,6 +87,37 @@ main {
 
 .highlight {
     color: crimson;
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn {
+    border: 3px solid floralwhite;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: floralwhite;
+    font-size: larger;
+}
+
+@keyframes btncolor {
+    0% {
+        border-color: floralwhite;
+        color: floralwhite;
+    }
+
+    100% {
+        border-color: crimson;
+        color: crimson;
+    }
+}
+
+.btn:hover {
+    animation: btncolor .5s ease forwards;
+    -webkit-animation: btncolor .5s ease forwards;
 }
 
 .about {
@@ -140,11 +169,11 @@ footer {
     position: absolute;
     bottom: 0;
     text-align: center;
-    margin-block: 5px;
+    padding-block: 5px;
 }
 
 @media (max-width: 1320px) {
-    .home{
+    .home {
         left: 0;
         right: 0;
         transform: translate(0, -50%);
@@ -152,7 +181,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .home{
+    .home {
         left: 0;
         right: 0;
         transform: translate(0, -50%);
@@ -169,11 +198,23 @@ footer {
     .home-header {
         font-size: 2rem;
     }
+
+    .btn {
+        padding: 5px 25px;
+        font-size: medium;
+        border-width: 2px;
+    }
 }
 
 @media (max-width: 470px) {
-    .home-header{
+    .home-header {
         font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 5px 25px;
+        font-size: medium;
+        border-width: 2px;
     }
 }
 
@@ -186,6 +227,12 @@ footer {
 
     .home-header {
         font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 5px 25px;
+        font-size: medium;
+        border-width: 2px;
     }
 
     .contact-header {
