@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-image: url("../img/background2.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -133,7 +133,7 @@ main {
     -moz-animation: bounce 3s ease;
 }
 
-footer{
+footer {
     width: 100%;
     font-size: large;
     color: floralwhite;
@@ -141,4 +141,54 @@ footer{
     bottom: 0;
     text-align: center;
     margin-block: 5px;
+}
+
+@media (max-width: 1320px) {
+    .home{
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .home{
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+@media (max-width: 765px) {
+    .home {
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+
+    .home-header {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .home-header{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .home {
+        left: 0;
+        right: 0;
+        transform: translate(0%, -50%);
+    }
+
+    .home-header {
+        font-size: 1.5rem;
+    }
+
+    .contact-header {
+        font-size: 3rem;
+    }
 }
