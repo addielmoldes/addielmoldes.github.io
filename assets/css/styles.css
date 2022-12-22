@@ -1,10 +1,19 @@
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: floralwhite;
+}
+
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("../img/background2.jpg");
-    background-attachment: fixed;
+    background-image: url("../images/background2.jpg");
+    /* background-attachment: fixed; */
     background-position: center;
     background-size: cover;
     backdrop-filter: brightness(7%);
@@ -22,23 +31,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: inherit;
-}
-
-.navbrand,
-.navitem {
-    text-decoration: none;
-    color: inherit;
-}
-
-@keyframes navcolor {
-    0% {
-        color: floralwhite;
-    }
-
-    100% {
-        color: crimson;
-    }
 }
 
 .navitem:hover {
@@ -48,13 +40,11 @@ nav {
 
 .navitem-active {
     color: crimson;
-    text-decoration: none;
 }
 
 .navlink {
     display: flex;
     justify-content: center;
-    list-style: none;
     padding: 0;
 }
 
@@ -98,21 +88,7 @@ main {
 .btn {
     border: 3px solid floralwhite;
     padding: 10px 50px;
-    text-decoration: none;
-    color: floralwhite;
     font-size: larger;
-}
-
-@keyframes btncolor {
-    0% {
-        border-color: floralwhite;
-        color: floralwhite;
-    }
-
-    100% {
-        border-color: crimson;
-        color: crimson;
-    }
 }
 
 .btn:hover {
@@ -130,7 +106,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     display: none;
@@ -139,20 +114,7 @@ main {
 .contact-links {
     display: flex;
     justify-content: space-evenly;
-    list-style: none;
     padding: 0;
-}
-
-@keyframes bounce {
-
-    from,
-    to {
-        rotate: 0;
-    }
-
-    50% {
-        rotate: 360deg;
-    }
 }
 
 .email:hover,
@@ -171,6 +133,44 @@ footer {
     text-align: center;
     padding-block: 5px;
 }
+
+/* Animations */
+
+@keyframes btncolor {
+    0% {
+        border-color: floralwhite;
+        color: floralwhite;
+    }
+
+    100% {
+        border-color: crimson;
+        color: crimson;
+    }
+}
+
+@keyframes bounce {
+
+    from,
+    to {
+        rotate: 0;
+    }
+
+    50% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes navcolor {
+    0% {
+        color: floralwhite;
+    }
+
+    100% {
+        color: crimson;
+    }
+}
+
+/* Media Queries */
 
 @media (max-width: 1320px) {
     .home {
