@@ -65,7 +65,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: none; */
 }
 
 .home-header,
@@ -77,23 +76,6 @@ main {
 
 .highlight {
     color: crimson;
-}
-
-.home-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.btn {
-    border: 3px solid floralwhite;
-    padding: 10px 50px;
-    font-size: larger;
-}
-
-.btn:hover {
-    animation: btncolor .5s ease forwards;
-    -webkit-animation: btncolor .5s ease forwards;
 }
 
 .about {
@@ -135,18 +117,6 @@ footer {
 }
 
 /* Animations */
-
-@keyframes btncolor {
-    0% {
-        border-color: floralwhite;
-        color: floralwhite;
-    }
-
-    100% {
-        border-color: crimson;
-        color: crimson;
-    }
-}
 
 @keyframes bounce {
 
@@ -198,23 +168,11 @@ footer {
     .home-header {
         font-size: 2rem;
     }
-
-    .btn {
-        padding: 5px 25px;
-        font-size: medium;
-        border-width: 2px;
-    }
 }
 
 @media (max-width: 470px) {
     .home-header {
         font-size: 1.5rem;
-    }
-
-    .btn {
-        padding: 5px 25px;
-        font-size: medium;
-        border-width: 2px;
     }
 }
 
