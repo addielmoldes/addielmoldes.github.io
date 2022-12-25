@@ -23,26 +23,26 @@ function contactInactive(){
     contactBtn.className = 'navitem';
 }
 
-homeBtn.addEventListener('click', function () {
-    aboutInactive();
-    contactInactive();
-    home.style.display = 'flex';
-    this.className = 'navitem-active';
-});
+// homeBtn.addEventListener('click', function () {
+//     aboutInactive();
+//     contactInactive();
+//     home.style.display = 'flex';
+//     this.className = 'navitem-active';
+// });
 
-aboutBtn.addEventListener('click', function () {
-    homeInactive();
-    contactInactive();
-    about.style.display = 'flex';
-    this.className = 'navitem-active';
-});
+// aboutBtn.addEventListener('click', function () {
+//     homeInactive();
+//     contactInactive();
+//     about.style.display = 'flex';
+//     this.className = 'navitem-active';
+// });
 
-contactBtn.addEventListener('click', function () {
-    homeInactive();
-    aboutInactive();
-    contact.style.display = 'flex';
-    this.className = 'navitem-active';
-});
+// contactBtn.addEventListener('click', function () {
+//     homeInactive();
+//     aboutInactive();
+//     contact.style.display = 'flex';
+//     this.className = 'navitem-active';
+// });
 
 message.addEventListener('input', function () {
     this.style.height = 'auto';
