@@ -1,12 +1,19 @@
 :root {
     --soft-crimson: rgba(220, 20, 60, .1);
     --soft-floralwhite: rgba(255, 250, 240, .1);
+    --dark-gray: rgba(10, 10, 10, 1);
+    --dark-gray-2: rgba(20, 20, 20, 1);
 }
 
 /* GLOBAL STYLES */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 hr {
@@ -23,13 +30,14 @@ a {
 }
 
 input {
-    height: 2em;
+    /* height: 2em;  */
     outline: none;
+    width: 100%;
 }
 
 textarea {
-    resize: none;
-    height: 2rem;
+    resize: vertical;
+    /* height: 2rem; */
     outline: none;
 }
 
@@ -43,6 +51,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-color: black;
     backdrop-filter: brightness(5%);
     -webkit-backdrop-filter: brightness(5%);
 }
@@ -100,6 +109,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 1s ease-out;
 }
 
 .home-button-container {
@@ -133,21 +143,20 @@ nav {
 
 .about {
     color: floralwhite;
-    /* height: calc(100vh - 90px); */
-    background-color: black;
-    padding-block: 70px;
+    background-color: var(--dark-gray-2);
+    padding-block: 50px;
     padding-inline: 50px;
-    /* display: none; */
+    border: 2px solid var(--soft-crimson);
 }
 
-.about-text{
+.about-text {
     text-align: center;
-    font-size: 2rem;
+    font-size: x-large;
     padding-block: 20px;
     padding-inline: 200px;
 }
 
-.link:hover{
+.link:hover {
     text-decoration: underline;
 }
 
@@ -175,7 +184,7 @@ nav {
 
 .skill-name {
     background-color: crimson;
-    width: 10%;
+    width: 15%;
     padding: 5px;
     font-size: large;
     text-align: center;
@@ -184,7 +193,7 @@ nav {
 .progress {
     background-color: var(--soft-floralwhite);
     margin-block: 5px;
-    width: 90%;
+    width: 85%;
 }
 
 .bar {
@@ -232,22 +241,18 @@ nav {
 }
 
 .contact {
-    background-color: black;
+    background-color: var(--dark-gray);
     color: floralwhite;
-    padding-block: 70px;
-    /* height: calc(100vh - 90px); */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
+    padding-block: 50px;
+    padding-inline: 50px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    /* display: none; */
+    align-items: center;
+    flex-direction: column;
 }
 
 .form-container {
-    margin-block: 5px;
+    margin-block: 10px;
 }
 
 .form-group {
@@ -258,10 +263,9 @@ nav {
     background-color: var(--soft-floralwhite);
     color: floralwhite;
     border: none;
-    border-bottom: 2px solid floralwhite;
-    padding-inline: 10px;
-    border-radius: 5px;
-    font-size: 1em;
+    padding: 10px;
+    border-radius: 1px;
+    font-size: larger;
 }
 
 .form-control:focus {
@@ -277,7 +281,7 @@ nav {
 
 .form-button {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .form-submit {
@@ -286,11 +290,26 @@ nav {
     border: 2px solid floralwhite;
     border-radius: 5px;
     font-size: large;
-    padding-block: 5px;
+    padding-block: 10px;
     padding-inline: 20px;
 }
 
 .form-submit:hover {
+    animation: submitBtn .5s ease forwards;
+}
+
+.scroll-button {
+    position: sticky;
+    bottom: 10px;
+    float: right;
+    right: 10px;
+    z-index: 999;
+    border: 2px solid floralwhite;
+    background-color: var(--soft-floralwhite);
+    padding: 10px;
+}
+
+.scroll-button:hover {
     animation: submitBtn .5s ease forwards;
 }
 
@@ -299,12 +318,13 @@ nav {
     justify-content: center;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .email,
 .linkedin,
 .telegram {
-    width: 32px;
+    width: 48px;
 }
 
 .email:hover,
@@ -321,9 +341,8 @@ footer {
     /* position: sticky; */
     /* bottom: 0; */
     text-align: center;
-    padding-block: 5px;
-    /* backdrop-filter: brightness(5%);
-    -webkit-backdrop-filter: brightness(5%); */
+    padding-block: 30px;
+    background-color: black;
 }
 
 /* Animations */
@@ -353,6 +372,7 @@ footer {
 @keyframes submitBtn {
     0% {
         border-color: floralwhite;
+        /* background-color: var(--soft-floralwhite); */
         color: floralwhite;
     }
 
@@ -360,6 +380,7 @@ footer {
         border-color: crimson;
         color: crimson;
         border-radius: 15px;
+        background-color: var(--soft-crimson);
     }
 }
 

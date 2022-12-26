@@ -44,10 +44,10 @@ function contactInactive(){
 //     this.className = 'navitem-active';
 // });
 
-message.addEventListener('input', function () {
-    this.style.height = 'auto';
-    this.style.height = this.scrollHeight + 'px';
-});
+// message.addEventListener('input', function () {
+//     this.style.height = 'auto';
+//     this.style.height = this.scrollHeight + 'px';
+// });
 
 form.addEventListener('submit', function (e) {
     if (email.value == '' || message.value == '') {
