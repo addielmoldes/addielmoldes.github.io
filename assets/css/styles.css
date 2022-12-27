@@ -31,14 +31,12 @@ a {
 }
 
 input {
-    /* height: 2em;  */
     outline: none;
     width: 100%;
 }
 
 textarea {
     resize: vertical;
-    /* height: 2rem; */
     outline: none;
 }
 
@@ -47,23 +45,17 @@ textarea {
 body {
     margin: 0;
     padding: 0;
-    /* height: auto; */
     background-image: url("../images/background_480.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-color: black;
     backdrop-filter: brightness(5%);
     -webkit-backdrop-filter: brightness(5%);
 }
 
 header {
-    /* position: sticky; */
     top: 0;
-
     height: 100vh;
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
 }
 
 nav {
@@ -93,12 +85,8 @@ nav {
 }
 
 .navitem:hover {
-    animation: navcolor .5s ease forwards;
-    -moz-animation: navcolor .5s ease forwards;
-}
-
-.navitem-active {
-    color: crimson;
+    animation: nav_anim .5s ease forwards;
+    -moz-animation: nav_anim .5s ease forwards;
 }
 
 .home {
@@ -110,6 +98,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     transition: 1s ease-out;
+    -webkit-transition: 1s ease-out;
 }
 
 .home-button-container {
@@ -125,8 +114,8 @@ nav {
 }
 
 .home-button:hover {
-    animation: submitBtn .5s ease forwards;
-    -webkit-animation: submitBtn .5s ease forwards;
+    animation: btn_anim .5s ease forwards;
+    -webkit-animation: btn_anim .5s ease forwards;
 }
 
 .home-header,
@@ -159,7 +148,8 @@ nav {
     text-decoration: underline;
 }
 
-.about-content {
+.about-content,
+.qual {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
@@ -246,12 +236,6 @@ nav {
     margin-block: 20px;
 }
 
-.qual {
-    display: flex;
-    justify-content: space-evenly;
-    padding-block: 20px;
-}
-
 .qual-container {
     display: flex;
     flex-direction: column;
@@ -261,19 +245,15 @@ nav {
     width: 15%;
 }
 
-.qual-title {
-    font-size: larger;
-}
-
+.qual-title,
 .qual-content {
-    font-size: large;
+    font-size: larger;
 }
 
 .contact {
     background-color: var(--dark-gray);
     color: floralwhite;
-    padding-block: 50px;
-    padding-inline: 50px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,6 +281,7 @@ nav {
     background-color: var(--soft-crimson);
     border-color: crimson;
     transition: .5s ease all;
+    -webkit-transition: .5s ease all;
 }
 
 .g-recaptcha {
@@ -323,8 +304,10 @@ nav {
     padding-inline: 20px;
 }
 
-.form-submit:hover {
-    animation: submitBtn .5s ease forwards;
+.form-submit:hover,
+.scroll-button:hover {
+    animation: btn_anim .5s ease forwards;
+    -webkit-animation: btn_anim .5s ease forwards;
 }
 
 .scroll-button {
@@ -338,10 +321,6 @@ nav {
     padding: 10px;
     display: flex;
 
-}
-
-.scroll-button:hover {
-    animation: scrollBtn .5s ease forwards;
 }
 
 .contact-links {
@@ -366,8 +345,8 @@ nav {
 .email:hover,
 .linkedin:hover,
 .telegram:hover {
-    animation: bounce 3s ease;
-    -moz-animation: bounce 3s ease;
+    animation: rotate_anim 3s ease;
+    -webkit-animation: rotate_anim 3s ease;
 }
 
 footer {
@@ -382,19 +361,19 @@ footer {
 
 /* Animations */
 
-@keyframes bounce {
+@keyframes rotate_anim {
     50% {
         rotate: 360deg;
     }
 }
 
-@keyframes navcolor {
+@keyframes nav_anim {
     to {
         color: crimson;
     }
 }
 
-@keyframes submitBtn {
+@keyframes btn_anim {
     to {
         border-color: crimson;
         color: crimson;
@@ -403,61 +382,46 @@ footer {
     }
 }
 
-@keyframes scrollBtn {
-    to {
-        border-color: crimson;
-        color: crimson;
-        background-color: var(--soft-crimson);
-        fill: crimson;
-    }
-}
-
-@keyframes inputBorder {
-
-    from,
-    to {
-        border-color: crimson;
-    }
-
-    50% {
-        border-color: floralwhite;
-    }
-}
-
 /* Media Queries */
 
-@media (max-width: 1320px) {
-    .home {
-        left: 0;
-        right: 0;
-        transform: translate(0, -50%);
+@media (max-width: 1400px) {
+
+    .about,
+    .contact,
+    footer {
+        padding: 20px;
+    }
+
+    .about-text {
+        padding-inline: 50px;
+    }
+
+    .about-content {
+        padding-inline: 0;
+    }
+
+    .skill-name {
+        width: 25%;
+    }
+
+    .progress {
+        width: 75%;
     }
 }
 
-@media (max-width: 1024px) {
-    .home {
-        left: 0;
-        right: 0;
-        transform: translate(0, -50%);
-    }
-
-    .form-container {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 765px) {
+@media (max-width: 795px) {
 
     .home-header {
         font-size: 1.5rem;
     }
 
-    .about {
+    .about,
+    .contact,
+    footer {
         padding: 10px;
     }
 
     .about-content {
-        padding-inline: 0;
         flex-direction: column;
         align-items: center;
     }
@@ -486,14 +450,7 @@ footer {
         margin-block: 20px;
     }
 
-    .contact {
-        padding: 10px;
-    }
-
-    .form-container {
-        width: 100%;
-    }
-
+    .form-container,
     .form-control {
         width: 100%;
     }
@@ -502,75 +459,4 @@ footer {
         margin: 0;
         z-index: 1000;
     }
-
-    footer {
-        padding: 10px;
-    }
 }
-
-/* @media (max-width: 470px) {
-    .home-header {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 376px) {
-    .home-header {
-        font-size: 1.5rem;
-    }
-
-    .about {
-        padding: 10px;
-    }
-
-    .about-content {
-        padding-inline: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-text {
-        padding-inline: 0;
-        font-size: larger;
-    }
-
-    .skill-name {
-        width: 30%;
-    }
-
-    .progress {
-        width: 70%;
-    }
-
-    .qual {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .qual-container {
-        width: 80%;
-        margin-block: 20px;
-    }
-
-    .contact {
-        padding: 10px;
-    }
-
-    .form-container {
-        width: 100%;
-    }
-
-    .form-control {
-        width: 100%;
-    }
-
-    .contact-links {
-        margin: 0;
-        z-index: 1000;
-    }
-
-    footer {
-        padding: 10px;
-    }
-} */
