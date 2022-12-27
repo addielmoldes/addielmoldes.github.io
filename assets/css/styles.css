@@ -201,6 +201,10 @@ nav {
     width: 90%;
 }
 
+.php {
+    width: 45%;
+}
+
 .js {
     width: 80%;
 }
@@ -284,7 +288,8 @@ nav {
     -webkit-transition: .5s ease all;
 }
 
-.g-recaptcha, .form-button {
+.g-recaptcha,
+.form-button {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
