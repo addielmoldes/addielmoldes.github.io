@@ -284,14 +284,10 @@ nav {
     -webkit-transition: .5s ease all;
 }
 
-.g-recaptcha {
+.g-recaptcha, .form-button {
     display: flex;
     justify-content: center;
-}
-
-.form-button {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .form-submit {
