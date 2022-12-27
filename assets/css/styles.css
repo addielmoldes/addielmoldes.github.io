@@ -45,7 +45,7 @@ textarea {
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../images/background_480.jpg");
+    background-image: url("../images/background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
