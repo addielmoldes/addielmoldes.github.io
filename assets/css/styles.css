@@ -339,13 +339,15 @@ nav {
 }
 
 .linkedin,
-.telegram {
+.telegram,
+.github {
     width: 48px;
 }
 
 .email:hover,
 .linkedin:hover,
-.telegram:hover {
+.telegram:hover,
+.github:hover {
     animation: rotate_anim 3s ease;
     -webkit-animation: rotate_anim 3s ease;
 }
