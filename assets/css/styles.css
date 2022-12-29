@@ -133,7 +133,7 @@ nav {
     text-align: center;
 }
 
-.highlight {
+.highlight, .navitem-active {
     color: crimson;
 }
 
