@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100vh;
 }
 
 * {
@@ -51,6 +52,13 @@ body {
     background-size: cover;
     backdrop-filter: brightness(5%);
     -webkit-backdrop-filter: brightness(5%);
+}
+
+@supports not (backdrop-filter: brightness(5%)) {
+    body{
+        background-image: none;
+        background-color: black;
+    }
 }
 
 header {
