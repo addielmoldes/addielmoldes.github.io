@@ -165,6 +165,8 @@ nav {
 
 .linkedin-card {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .skills {
