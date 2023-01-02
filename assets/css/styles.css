@@ -98,7 +98,9 @@ nav {
 
 .navitem:hover {
     animation: nav_anim .5s ease forwards;
+    -webkit-animation: nav_anim .5s ease forwards;
     -moz-animation: nav_anim .5s ease forwards;
+    -o-animation: nav_anim .5s ease forwards;
 }
 
 .home {
@@ -111,6 +113,8 @@ nav {
     justify-content: center;
     transition: 1s ease-out;
     -webkit-transition: 1s ease-out;
+    -moz-transition: 1s ease-out;
+    -o-transition: 1s ease-out;
 }
 
 .home-button-container {
@@ -128,6 +132,8 @@ nav {
 .home-button:hover {
     animation: btn_anim .5s ease forwards;
     -webkit-animation: btn_anim .5s ease forwards;
+    -moz-animation: btn_anim .5s ease forwards;
+    -o-animation: btn_anim .5s ease forwards;
 }
 
 .home-header,
@@ -245,7 +251,7 @@ nav {
 }
 
 .ui {
-    width: 55%;
+    width: 60%;
 }
 
 .skills-header,
@@ -316,6 +322,8 @@ nav {
     border-color: crimson;
     transition: .5s ease all;
     -webkit-transition: .5s ease all;
+    -moz-transition: .5s ease all;
+    -o-transition: .5s ease all;
 }
 
 .g-recaptcha,
@@ -339,6 +347,8 @@ nav {
 .scroll-button:hover {
     animation: btn_anim .5s ease forwards;
     -webkit-animation: btn_anim .5s ease forwards;
+    -moz-animation: btn_anim .5s ease forwards;
+    -o-animation: btn_anim .5s ease forwards;
 }
 
 .scroll-button {
@@ -380,6 +390,8 @@ nav {
 .github:hover {
     animation: rotate_anim 3s ease;
     -webkit-animation: rotate_anim 3s ease;
+    -moz-animation: rotate_anim 3s ease;
+    -o-animation: rotate_anim 3s ease;
 }
 
 footer {
@@ -457,6 +469,7 @@ footer {
     .about-content {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .about-text {
@@ -490,6 +503,10 @@ footer {
 
     .project>figure>img {
         width: 100%;
+    }
+
+    .form-container{
+        margin-block: 30px;
     }
 
     .form-container,
