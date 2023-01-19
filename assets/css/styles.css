@@ -404,6 +404,10 @@ footer {
     border-top: 2px solid var(--soft-floralwhite)
 }
 
+.counter{
+    font-size: larger;
+}
+
 /* Animations */
 
 @keyframes rotate_anim {
@@ -512,6 +516,12 @@ footer {
     .form-container,
     .form-control {
         width: 100%;
+    }
+    .counter{
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center ;
     }
 
     .contact-links {
