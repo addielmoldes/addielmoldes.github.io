@@ -194,6 +194,22 @@
         </footer>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <script>
+            let bar = document.getElementsByClassName('bar');
+            let st = document.createElement('style');
+            document.head.appendChild(st);
+            for (elem in bar) {
+                try {
+                    let w = bar[elem].textContent.substring(0, 2);
+                    let anim = '@keyframes animWidth' + elem + '{ 0%{ width: 0; } 100%{ width: ' + w + '% } }';
+                    st.innerHTML = st.innerHTML.concat(anim);
+                    bar[elem].style = 'animation: animWidth' + elem + ' 2s ease forwards;';
+                }
+                catch (e) {
+                    break;
+                }
+            }
+        </script>
     </body>
 
 </html>
