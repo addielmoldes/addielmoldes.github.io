@@ -380,14 +380,16 @@ nav {
 
 .linkedin,
 .telegram,
-.github {
+.github,
+.instagram {
     width: 48px;
 }
 
 .email:hover,
 .linkedin:hover,
 .telegram:hover,
-.github:hover {
+.github:hover,
+.instagram:hover {
     animation: rotate_anim 3s ease;
     -webkit-animation: rotate_anim 3s ease;
     -moz-animation: rotate_anim 3s ease;
@@ -404,7 +406,7 @@ footer {
     border-top: 2px solid var(--soft-floralwhite)
 }
 
-.counter{
+.counter {
     font-size: larger;
 }
 
@@ -509,7 +511,7 @@ footer {
         width: 100%;
     }
 
-    .form-container{
+    .form-container {
         margin-block: 30px;
     }
 
@@ -517,11 +519,12 @@ footer {
     .form-control {
         width: 100%;
     }
-    .counter{
+
+    .counter {
         display: flex;
         /* justify-content: center; */
         flex-direction: column;
-        align-items: center ;
+        align-items: center;
     }
 
     .contact-links {
