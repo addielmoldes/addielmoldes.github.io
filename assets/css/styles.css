@@ -180,6 +180,14 @@ nav {
     justify-content: center;
 }
 
+.profile{
+    align-self: center;
+}
+.profile > img{
+    border-radius: 50%;
+    width: 250px;
+}
+
 .skills {
     width: 100%;
     padding-inline: 20px;
