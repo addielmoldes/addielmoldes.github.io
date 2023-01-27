@@ -145,7 +145,7 @@ nav {
 
 .highlight,
 .navitem-active {
-    color: crimson;
+    color: #dc143c;
 }
 
 .about {
@@ -165,6 +165,7 @@ nav {
 
 .link:hover {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 .about-content,
