@@ -188,6 +188,12 @@ nav {
 .profile>img {
     border-radius: 50%;
     width: 250px;
+    border: 5px solid var(--soft-crimson);
+    transition: transform ease all;
+}
+.profile>img:hover{
+    transform: scale(1.05);
+    transition: .1s ease all;
 }
 
 .skills {
@@ -272,6 +278,28 @@ nav {
 
 .ui {
     width: 60%;
+}
+
+.tech-tools {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.tech-container,
+.tools-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+    gap: 10px;
+    transition: transform .2s ease;
+}
+
+.tech-container>img:hover,
+.tools-container>img:hover {
+    transform: scale(1.2);
+    transition: .1s ease all;
 }
 
 .skills-header,
@@ -477,6 +505,10 @@ footer {
     .progress {
         width: 75%;
     }
+        .tech-container,
+        .tools-container{
+            flex-basis: 40%;
+        }
 }
 
 @media (max-width: 795px) {
@@ -508,6 +540,11 @@ footer {
 
     .progress {
         width: 70%;
+    }
+
+    .tech-tools{
+        flex-direction: column;
+        gap: 20px;
     }
 
     .qual {
