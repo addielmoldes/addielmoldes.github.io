@@ -181,10 +181,11 @@ nav {
     justify-content: center;
 }
 
-.profile{
+.profile {
     align-self: center;
 }
-.profile > img{
+
+.profile>img {
     border-radius: 50%;
     width: 250px;
 }
@@ -207,12 +208,16 @@ nav {
     padding: 5px;
     font-size: large;
     text-align: center;
+    border-end-start-radius: 5px;
+    border-start-start-radius: 5px;
 }
 
 .progress {
     background-color: var(--soft-floralwhite);
     margin-block: 5px;
     width: 85%;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
 }
 
 .bar {
@@ -221,6 +226,8 @@ nav {
     padding-inline: 10px;
     text-align: end;
     font-size: large;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
 }
 
 .ht {
@@ -248,15 +255,19 @@ nav {
 }
 
 .rb {
-    width: 70%;
+    width: 60%;
 }
 
 .ror {
-    width: 50%;
+    width: 70%;
 }
 
 .ng {
     width: 35%;
+}
+
+.flu {
+    width: 65%;
 }
 
 .ui {
@@ -370,7 +381,6 @@ nav {
     background-color: var(--soft-floralwhite);
     padding: 10px;
     display: flex;
-
 }
 
 .contact-links {
