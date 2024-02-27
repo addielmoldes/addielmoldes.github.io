@@ -9,6 +9,7 @@
 		<meta name="keywords"
 			content="Web Developer, Android Developer, Programmer, Portfolio, Frontend, Backend, Full Stack, Addiel Moldes, Cuba">
 		<link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+		<link rel="preload" href="https://www.google.com/recaptcha/api.js" as="script" />
 		<!-- <link rel="stylesheet" href="assets/css/styles.min.css"> -->
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<title>Addiel Moldes | Web developer</title>
@@ -194,18 +195,18 @@
 								class="highlight">modify</span>, leading to improved readability and long-term sustainability</div>
 					</div>
 				</div>
-				<hr>
-				<div class="projects-header">Web Projects</div>
-				<div class="projects-container">
-					<div class="project">
-						<figure>
-							<img src="assets/images/projects/greguera_res.webp" alt="gonzalez-reguera" loading="lazy">
-							<figcaption><a href="https://gonzalez-reguera.pages.dev" target="_blank"><span
-										class="highlight link">Gonzalez Reguera Cabinet & Granite</span></a>
-							</figcaption>
-						</figure>
-					</div>
-				</div>
+<!--				<hr>-->
+<!--				<div class="projects-header">Web Projects</div>-->
+<!--				<div class="projects-container">-->
+<!--					<div class="project">-->
+<!--						<figure>-->
+<!--							<img src="assets/images/projects/greguera_res.webp" alt="gonzalez-reguera" loading="lazy">-->
+<!--							<figcaption><a href="https://gonzalez-reguera.pages.dev" target="_blank"><span-->
+<!--										class="highlight link">Gonzalez Reguera Cabinet & Granite</span></a>-->
+<!--							</figcaption>-->
+<!--						</figure>-->
+<!--					</div>-->
+<!--				</div>-->
 			</section>
 			<section id="contact" class="contact">
 				<div class="contact-header"> Get in touch </div>
@@ -228,11 +229,6 @@
 						</div>
 					</form>
 				</div>
-				<!-- <div class="counter" align="center"> Visitas: <a href='https://www.counter12.com'><img
-							src='https://www.counter12.com/img-36a93z7w9YCW80Dx-22.gif' border='0' alt='free counter'
-							width="22"></a>
-					<script type='text/javascript' src='https://www.counter12.com/ad.js?id=36a93z7w9YCW80Dx'></script>
-				</div> -->
 			</section>
 			<a href="#home" class="scroll-button"><img src="assets/icons/uparrow.svg" width="24" alt="up" class="uparr"
 					loading="lazy"></a>
@@ -254,14 +250,14 @@
 								width="40" alt="email" title="Email" class="email" loading="lazy"></a></li>
 				</ul>
 			</div>
-			<small>&copy;2023 Addiel Moldes | Web & Android developer</small>
+			<small>&copy;2024 Addiel Moldes | Web & Android developer</small>
 		</footer>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script>
 			let bar = document.getElementsByClassName('bar');
 			let st = document.createElement('style');
 			document.head.appendChild(st);
-			for (elem in bar) {
+			for (let elem in bar) {
 				try {
 					let w = bar[elem].textContent.substring(0, 2);
 					let anim = '@keyframes animWidth' + elem + '{ 0%{ width: 0; } 100%{ width: ' + w + '% } }';

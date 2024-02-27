@@ -9,7 +9,7 @@
 
 html {
 	scroll-behavior: smooth;
-	height: 100vh;
+	max-height: 100vh;
 }
 
 * {
@@ -196,7 +196,7 @@ nav {
 	border-radius: 50%;
 	width: 250px;
 	border: 5px solid var(--soft-crimson);
-	transition: transform ease all;
+	transition: transform ease;
 }
 
 .profile>img:hover {
