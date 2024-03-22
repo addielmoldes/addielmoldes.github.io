@@ -13,7 +13,7 @@ html {
 }
 
 * {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Fira Code', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	box-sizing: border-box;
 }
 
@@ -148,6 +148,8 @@ nav {
 .about-header {
 	font-size: 3rem;
 	text-align: center;
+	font-weight: normal;
+	margin: 0 0;
 }
 
 .highlight,
@@ -299,6 +301,7 @@ nav {
 	flex-basis: 100%;
 	text-align: center;
 	font-size: xx-large;
+	font-weight: normal;
 }
 
 .tech-container,
@@ -320,6 +323,7 @@ nav {
 .skills-header,
 .projects-header {
 	text-align: center;
+	font-weight: normal;
 	color: floralwhite;
 	font-size: xx-large;
 	margin-block: 20px;
